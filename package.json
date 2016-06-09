@@ -1,13 +1,13 @@
 {
   "name": "boilerplate",
   "version": "1.0.0",
-  "description": "Simple react app",
+  "description": "Todo List App",
   "main": "index.js",
   "scripts": {
     "test": "karma start",
     "start": "node server.js"
   },
-  "author": "Andrew Mead",
+  "author": "Adam Cooper",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.9.1",
