@@ -34,6 +34,7 @@ var ToDoApp = React.createClass({
 
     return (
       <div className="columns medium-6 large-4 small-centered">
+        <h1>Todo App</h1>
         <TodoList todos={todos}/>
         <AddTodo onAddTodo={this.handleAddToDo}/>
       </div>
