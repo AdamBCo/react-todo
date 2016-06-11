@@ -50,6 +50,49 @@ describe('TodoAPI', () => {
       var actualTodos = TodoAPI.getTodos();
       expect(actualTodos).toEqual(todos);
     });
-
   });
+
+  describe('filterTodos', () => {
+
+    var todos = [
+      {
+        id: 11,
+        text: 'Hello Todo',
+        completed: true
+      },
+      {
+        id: 2,
+        text: 'Nice Todo',
+        completed: false
+      },
+      {
+        id: 3,
+        text: 'Bad Todo',
+        completed: false
+      }
+    ];
+
+
+    it('should return all items if showCompleted is true array for bad localStorage data', () => {
+      var filteredTodos = TodoAPI.filterTodos(todos, true, '');
+      expect(filteredTodos.length).toBe(3);
+    });
+
+    it('should return non-completed todos when showCompleted is false', () => {
+      var filteredTodos = TodoAPI.filterTodos(todos, false, '');
+      expect(filteredTodos.length).toBe(2);
+    });
+    //
+    // it('should return todos if valid array in localStorage', () => {
+    //   var todos = [{
+    //     id: 11,
+    //     text: 'Hello Todo',
+    //     completed: false
+    //   }];
+    //   localStorage.setItem('todos', JSON.stringify(todos));
+    //   var actualTodos = TodoAPI.getTodos();
+    //   expect(actualTodos).toEqual(todos);
+    // });
+  });
+
 });
