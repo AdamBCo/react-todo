@@ -1,5 +1,5 @@
 .container {
-  background-color: $light-grey;
+  background: $light-grey;
   border: 1px solid $light-grey-border;
   border-radius: 5px;
   padding: 0;
@@ -19,7 +19,6 @@
     align-items: center;
     display: flex;
   }
-
 }
 
 .container__message {

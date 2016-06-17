@@ -41,16 +41,15 @@ describe('Reducers', () => {
 
     it('should toggle todo', () => {
       var todos = [{
-        id: 11,
-        text: 'Hello Todo',
+        id: '123',
+        text: 'Something',
         completed: true,
-        createdAt: 0,
-        completedAt: 123
+        createdAt: 123,
+        completedAt: 125
       }];
-
       var action = {
         type: 'TOGGLE_TODO',
-        id: '11'
+        id: '123'
       };
       var res = reducers.todosReducer(df(todos), df(action));
 

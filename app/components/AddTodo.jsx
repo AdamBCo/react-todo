@@ -1,7 +1,7 @@
 var React = require('react');
 
 var AddTodo = React.createClass({
-  onSubmit: function (e) {
+  handleSubmit: function (e) {
     e.preventDefault();
     var todoText = this.refs.todoText.value;
 
@@ -15,8 +15,8 @@ var AddTodo = React.createClass({
   render: function () {
     return (
       <div className="container__footer">
-        <form ref="form" onSubmit={this.onSubmit} className="countdown-form">
-          <input type="text" ref="todoText" placeholder="Todo Name"/>
+        <form onSubmit={this.handleSubmit}>
+          <input type="text" ref="todoText" placeholder="What do you need to do?"/>
           <button className="button expanded">Add Todo</button>
         </form>
       </div>
