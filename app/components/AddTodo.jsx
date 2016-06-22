@@ -8,8 +8,6 @@ export var AddTodo = React.createClass({
     var {dispatch} = this.props;
     var todoText = this.refs.todoText.value;
 
-    console.log('adsfa' + todoText);
-
     if (todoText.length > 0) {
       this.refs.todoText.value = '';
       dispatch(actions.startAddTodo(todoText));
