@@ -151,7 +151,7 @@ describe('Actions', () => {
         expect(mockActions[0].todos[0].text).toEqual('Something to do');
 
         done();
-      }, done);
+      }, done)
     });
 
     it('should create todo and dispatch ADD_TODO', (done) => {
